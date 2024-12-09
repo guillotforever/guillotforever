@@ -84,9 +84,9 @@ footer {
 footer {
     text-align: center;
     padding: 10px;
-    background: #222; /* Fond sombre */
-    color: white; /* Texte blanc */
-    font-size: 0.8em; /* Taille réduite */
+    background: #bfc1e8; /* Fond sombre */
+    color: black; /* Texte blanc */
+    font-size: 1.5em; /* Taille réduite */
 }
 
 /* Responsiveness */
