@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie Photo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            max-width: 90%;
+            margin: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+        .lightbox:target {
+            display: flex;
+        }
+        .lightbox a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #bfc1e8; /* Fond sombre */
+            color: black; /* Texte blanc */
+            font-size: 1.5em; /* Taille réduite */
+        }
+    </style>
+</head>
+<body>
+    <h1>2019 : Année des 70 ans</h1>
+    <div class="gallery">
+        <a href="#photo1"><img src="photos-2019-70ans/000-sommaire.jpg" alt="Photo 1"></a>
+        <a href="#photo2"><img src="photos-2019-70ans/00-GroupeTotal70(1iereDeCouve).jpg" alt="Photo 2"></a>
+        <a href="#photo3"><img src="photos-2019-70ans/1-MontBlanc.jpg" alt="Photo 3"></a>
+        <a href="#photo4"><img src="photos-2019-70ans/2-PatNeige.jpg" alt="Photo 4"></a>
+        <a href="#photo5"><img src="photos-2019-70ans/3-Tablette.jpg" alt="Photo 5"></a>
+        <a href="#photo6"><img src="photos-2019-70ans/4-Aspirateur.jpg" alt="Photo 6"></a>
+        <a href="#photo7"><img src="photos-2019-70ans/5-Croisiere.jpg" alt="Photo 7"></a>
+        <a href="#photo8"><img src="photos-2019-70ans/6-Bateau.jpg" alt="Photo 8"></a>
+        <a href="#photo9"><img src="photos-2019-70ans/7-DansBateau.jpg" alt="Photo 9"></a>
+        <a href="#photo10"><img src="photos-2019-70ans/8-bisAbouDhabi.jpg" alt="Photo 10"></a>
+        <a href="#photo11"><img src="photos-2019-70ans/8-Dubai.jpg" alt="Photo 11"></a>
+        <a href="#photo12"><img src="photos-2019-70ans/9-Cochin.jpg" alt="Photo 12"></a>
+        <a href="#photo13"><img src="photos-2019-70ans/10-Colombo.jpg" alt="Photo 13"></a>
+        <a href="#photo14"><img src="photos-2019-70ans/11-KualaLumpur.jpg" alt="Photo 14"></a>
+        <a href="#photo15"><img src="photos-2019-70ans/12-Singapour.jpg" alt="Photo 15"></a>
+        <a href="#photo16"><img src="photos-2019-70ans/13-Bangkok.jpg" alt="Photo 16"></a>
+        <a href="#photo17"><img src="photos-2019-70ans/14-HoChiMinhVille.jpg" alt="Photo 17"></a>
+        <a href="#photo18"><img src="photos-2019-70ans/15-HongKong.jpg" alt="Photo 18"></a>
+        <a href="#photo19"><img src="photos-2019-70ans/16-Taipei.jpg" alt="Photo 19"></a>
+        <a href="#photo20"><img src="photos-2019-70ans/17-Tokyo.jpg" alt="Photo 20"></a>
+        <a href="#photo21"><img src="photos-2019-70ans/19-VeloElec.jpg" alt="Photo 21"></a>
+        <a href="#photo22"><img src="photos-2019-70ans/20-DevantLogement.jpg" alt="Photo 22"></a>
+        <a href="#photo23"><img src="photos-2019-70ans/21-JeSuisVigne.jpg" alt="Photo 23"></a>
+        <a href="#photo24"><img src="photos-2019-70ans/21ter-GG70le18juin.jpg" alt="Photo 24"></a>
+        <a href="#photo25"><img src="photos-2019-70ans/22-AngeliqueEnfants.jpg" alt="Photo 25"></a>
+        <a href="#photo26"><img src="photos-2019-70ans/23-GroupeAze.jpg" alt="Photo 26"></a>
+        <a href="#photo27"><img src="photos-2019-70ans/24-PiscineAze.jpg" alt="Photo 27"></a>
+        <a href="#photo28"><img src="photos-2019-70ans/25-LaFolie.jpg" alt="Photo 28"></a>
+        <a href="#photo29"><img src="photos-2019-70ans/26a-ParcFloral.jpg" alt="Photo 29"></a>
+        <a href="#photo30"><img src="photos-2019-70ans/26b-FleurLotus.jpg" alt="Photo 30"></a>
+        <a href="#photo31"><img src="photos-2019-70ans/26-bisSamLouis.jpg" alt="Photo 31"></a>
+        <a href="#photo32"><img src="photos-2019-70ans/26-LaMaisonPasquier.jpg" alt="Photo 32"></a>
+        <a href="#photo33"><img src="photos-2019-70ans/26-terEnfantsMats.jpg" alt="Photo 33"></a>
+        <a href="#photo34"><img src="photos-2019-70ans/27-Poteries.jpg" alt="Photo 34"></a>
+        <a href="#photo35"><img src="photos-2019-70ans/28-Bateaux.jpg" alt="Photo 35"></a>
+        <a href="#photo36"><img src="photos-2019-70ans/29-Santorin1.jpg" alt="Photo 36"></a>
+        <a href="#photo37"><img src="photos-2019-70ans/30-Santorin2.jpg" alt="Photo 37"></a>
+        <a href="#photo38"><img src="photos-2019-70ans/31-Apero.jpg" alt="Photo 38"></a>
+        <a href="#photo39"><img src="photos-2019-70ans/32-Hippies.jpg" alt="Photo 39"></a>
+        <a href="#photo40"><img src="photos-2019-70ans/33-FillesFontaine.jpg" alt="Photo 40"></a>
+        <a href="#photo41"><img src="photos-2019-70ans/34-GenevieveBain.jpg" alt="Photo 41"></a>
+        <a href="#photo42"><img src="photos-2019-70ans/35-Lequipe.jpg" alt="Photo 42"></a>
+        <a href="#photo43"><img src="photos-2019-70ans/36-Apero201.jpg" alt="Photo 43"></a>
+        <a href="#photo44"><img src="photos-2019-70ans/37-Dessert201.jpg" alt="Photo 44"></a>
+        <a href="#photo45"><img src="photos-2019-70ans/38-bisJMGMonaco.jpg" alt="Photo 45"></a>
+        <a href="#photo46"><img src="photos-2019-70ans/38-GGarbres.jpg" alt="Photo 46"></a>
+        <a href="#photo47"><img src="photos-2019-70ans/39-bisParc.jpg" alt="Photo 47"></a>
+        <a href="#photo48"><img src="photos-2019-70ans/39-GGlunettes.jpg" alt="Photo 48"></a>
+        <a href="#photo49"><img src="photos-2019-70ans/40-bisJMGvelo.jpg" alt="Photo 49"></a>
+        <a href="#photo50"><img src="photos-2019-70ans/40-Oliviers.jpg" alt="Photo 50"></a>
+        <a href="#photo51"><img src="photos-2019-70ans/41-bisNoeudArbres.jpg" alt="Photo 51"></a>
+        <a href="#photo52"><img src="photos-2019-70ans/41-GGvelo.jpg" alt="Photo 52"></a>
+        <a href="#photo53"><img src="photos-2019-70ans/42-bisMenton.jpg" alt="Photo 53"></a>
+        <a href="#photo54"><img src="photos-2019-70ans/42-GGNice.jpg" alt="Photo 54"></a>
+        <a href="#photo55"><img src="photos-2019-70ans/43-Cote.jpg" alt="Photo 55"></a>
+        <a href="#photo56"><img src="photos-2019-70ans/46-AperoJeux.jpg" alt="Photo 56"></a>
+        <a href="#photo57"><img src="photos-2019-70ans/47-JeuxSalle.jpg" alt="Photo 57"></a>
+        <a href="#photo58"><img src="photos-2019-70ans/48-GroupeBordEau.jpg" alt="Photo 58"></a>
+        <a href="#photo59"><img src="photos-2019-70ans/49-Matsoury.jpg" alt="Photo 59"></a>
+        <a href="#photo60"><img src="photos-2019-70ans/50-MerRochers.jpg" alt="Photo 60"></a>
+        <a href="#photo61"><img src="photos-2019-70ans/51bis-JeuxTerrasse.jpg" alt="Photo 61"></a>
+        <a href="#photo62"><img src="photos-2019-70ans/51-RochersMer.jpg" alt="Photo 62"></a>
+        <a href="#photo63"><img src="photos-2019-70ans/52-8ATable.jpg" alt="Photo 63"></a>
+        <a href="#photo64"><img src="photos-2019-70ans/54-PortGrimaud.jpg" alt="Photo 64"></a>
+        <a href="#photo65"><img src="photos-2019-70ans/55-JMGrochers.jpg" alt="Photo 65"></a>
+        <a href="#photo66"><img src="photos-2019-70ans/56-SurLeRochers.jpg" alt="Photo 66"></a>
+        <a href="#photo67"><img src="photos-2019-70ans/57-Randonnee.jpg" alt="Photo 67"></a>
+        <a href="#photo68"><img src="photos-2019-70ans/58-CheneDore.jpg" alt="Photo 68"></a>
+        <a href="#photo69"><img src="photos-2019-70ans/59-FiletsBleus.jpg" alt="Photo 69"></a>
+        <a href="#photo70"><img src="photos-2019-70ans/60-Cremaillere.jpg" alt="Photo 70"></a>
+        <a href="#photo71"><img src="photos-2019-70ans/61-RepasPatrickGars.jpg" alt="Photo 71"></a>
+        <a href="#photo72"><img src="photos-2019-70ans/62-VueJourSoleil.jpg" alt="Photo 72"></a>
+        <a href="#photo73"><img src="photos-2019-70ans/63-VueJourNuage.jpg" alt="Photo 73"></a>
+        <a href="#photo74"><img src="photos-2019-70ans/64bis-LaBalladeNordVendeenne.jpg" alt="Photo 74"></a>
+        <a href="#photo75"><img src="photos-2019-70ans/64-VueMerSoir.jpg" alt="Photo 75"></a>
+        <a href="#photo76"><img src="photos-2019-70ans/65-Banquet.jpg" alt="Photo 76"></a>
+        <a href="#photo77"><img src="photos-2019-70ans/70-MontBlanc.jpg" alt="Photo 77"></a>
+        <a href="#photo78"><img src="photos-2019-70ans/71-SommetsEnneiges.jpg" alt="Photo 78"></a>
+        <a href="#photo79"><img src="photos-2019-70ans/75-DepartSki.jpg" alt="Photo 79"></a>
+        <a href="#photo80"><img src="photos-2019-70ans/76-8ATable.jpg" alt="Photo 80"></a>
+        <a href="#photo81"><img src="photos-2019-70ans/77-SoireeConcentree.jpg" alt="Photo 81"></a>
+        <a href="#photo82"><img src="photos-2019-70ans/78-PapyMontBlanc.jpg" alt="Photo 82"></a>
+        <a href="#photo83"><img src="photos-2019-70ans/79-6ATable.jpg" alt="Photo 83"></a>
+        <a href="#photo84"><img src="photos-2019-70ans/80-8EnPiste.jpg" alt="Photo 84"></a>
+        <a href="#photo85"><img src="photos-2019-70ans/81-Chanson70(4iemeDeCouve).jpg" alt="Photo 85"></a>
+    </div>
+
+    <!-- Lightbox pour afficher les images en grand -->
+    <div id="photo1" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/000-sommaire.jpg" alt="Photo 1">
+        </a>
+    </div>
+    <div id="photo2" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/00-GroupeTotal70(1iereDeCouve).jpg" alt="Photo 2">
+        </a>
+    </div>
+    <div id="photo3" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/1-MontBlanc.jpg" alt="Photo 3">
+        </a>
+    </div>
+    <div id="photo4" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/2-PatNeige.jpg" alt="Photo 4">
+        </a>
+    </div>
+    <div id="photo5" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/3-Tablette.jpg" alt="Photo 5">
+        </a>
+    </div>
+    <div id="photo6" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/4-Aspirateur.jpg" alt="Photo 6">
+        </a>
+    </div>
+    <div id="photo7" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/5-Croisiere.jpg" alt="Photo 7">
+        </a>
+    </div>
+    <div id="photo8" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/6-Bateau.jpg" alt="Photo 8">
+        </a>
+    </div>
+    <div id="photo9" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/7-DansBateau.jpg" alt="Photo 9">
+        </a>
+    </div>
+    <div id="photo10" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/8-bisAbouDhabi.jpg" alt="Photo 10">
+        </a>
+    </div>
+    <div id="photo11" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/8-Dubai.jpg" alt="Photo 11">
+        </a>
+    </div>
+    <div id="photo12" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/9-Cochin.jpg" alt="Photo 12">
+        </a>
+    </div>
+    <div id="photo13" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/10-Colombo.jpg" alt="Photo 13">
+        </a>
+    </div>
+    <div id="photo14" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/11-KualaLumpur.jpg" alt="Photo 14">
+        </a>
+    </div>
+    <div id="photo15" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/12-Singapour.jpg" alt="Photo 15">
+        </a>
+    </div>
+    <div id="photo16" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/13-Bangkok.jpg" alt="Photo 16">
+        </a>
+    </div>
+    <div id="photo17" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/14-HoChiMinhVille.jpg" alt="Photo 17">
+        </a>
+    </div>
+    <div id="photo18" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/15-HongKong.jpg" alt="Photo 18">
+        </a>
+    </div>
+    <div id="photo19" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/16-Taipei.jpg" alt="Photo 19">
+        </a>
+    </div>
+    <div id="photo20" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/17-Tokyo.jpg" alt="Photo 20">
+        </a>
+    </div>
+    <div id="photo21" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/19-VeloElec.jpg" alt="Photo 21">
+        </a>
+    </div>
+    <div id="photo22" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/20-DevantLogement.jpg" alt="Photo 22">
+        </a>
+    </div>
+    <div id="photo23" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/21-JeSuisVigne.jpg" alt="Photo 23">
+        </a>
+    </div>
+    <div id="photo24" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/21ter-GG70le18juin.jpg" alt="Photo 24">
+        </a>
+    </div>
+    <div id="photo25" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/22-AngeliqueEnfants.jpg" alt="Photo 25">
+        </a>
+    </div>
+    <div id="photo26" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/23-GroupeAze.jpg" alt="Photo 26">
+        </a>
+    </div>
+    <div id="photo27" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/24-PiscineAze.jpg" alt="Photo 27">
+        </a>
+    </div>
+    <div id="photo28" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/25-LaFolie.jpg" alt="Photo 28">
+        </a>
+    </div>
+    <div id="photo29" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/26a-ParcFloral.jpg" alt="Photo 29">
+        </a>
+    </div>
+    <div id="photo30" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/26b-FleurLotus.jpg" alt="Photo 30">
+        </a>
+    </div>
+    <div id="photo31" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/26-bisSamLouis.jpg" alt="Photo 31">
+        </a>
+    </div>
+    <div id="photo32" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/26-LaMaisonPasquier.jpg" alt="Photo 32">
+        </a>
+    </div>
+    <div id="photo33" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/26-terEnfantsMats.jpg" alt="Photo 33">
+        </a>
+    </div>
+    <div id="photo34" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/27-Poteries.jpg" alt="Photo 34">
+        </a>
+    </div>
+    <div id="photo35" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/28-Bateaux.jpg" alt="Photo 35">
+        </a>
+    </div>
+    <div id="photo36" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/29-Santorin1.jpg" alt="Photo 36">
+        </a>
+    </div>
+    <div id="photo37" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/30-Santorin2.jpg" alt="Photo 37">
+        </a>
+    </div>
+    <div id="photo38" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/31-Apero.jpg" alt="Photo 38">
+        </a>
+    </div>
+    <div id="photo39" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/32-Hippies.jpg" alt="Photo 39">
+        </a>
+    </div>
+    <div id="photo40" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/33-FillesFontaine.jpg" alt="Photo 40">
+        </a>
+    </div>
+    <div id="photo41" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/34-GenevieveBain.jpg" alt="Photo 41">
+        </a>
+    </div>
+    <div id="photo42" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/35-Lequipe.jpg" alt="Photo 42">
+        </a>
+    </div>
+    <div id="photo43" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/36-Apero201.jpg" alt="Photo 43">
+        </a>
+    </div>
+    <div id="photo44" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/37-Dessert201.jpg" alt="Photo 44">
+        </a>
+    </div>
+    <div id="photo45" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/38-bisJMGMonaco.jpg" alt="Photo 45">
+        </a>
+    </div>
+    <div id="photo46" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/38-GGarbres.jpg" alt="Photo 46">
+        </a>
+    </div>
+    <div id="photo47" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/39-bisParc.jpg" alt="Photo 47">
+        </a>
+    </div>
+    <div id="photo48" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/39-GGlunettes.jpg" alt="Photo 48">
+        </a>
+    </div>
+    <div id="photo49" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/40-bisJMGvelo.jpg" alt="Photo 49">
+        </a>
+    </div>
+    <div id="photo50" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/40-Oliviers.jpg" alt="Photo 50">
+        </a>
+    </div>
+    <div id="photo51" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/41-bisNoeudArbres.jpg" alt="Photo 51">
+        </a>
+    </div>
+    <div id="photo52" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/41-GGvelo.jpg" alt="Photo 52">
+        </a>
+    </div>
+    <div id="photo53" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/42-bisMenton.jpg" alt="Photo 53">
+        </a>
+    </div>
+    <div id="photo54" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/42-GGNice.jpg" alt="Photo 54">
+        </a>
+    </div>
+    <div id="photo55" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/43-Cote.jpg" alt="Photo 55">
+        </a>
+    </div>
+    <div id="photo56" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/46-AperoJeux.jpg" alt="Photo 56">
+        </a>
+    </div>
+    <div id="photo57" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/47-JeuxSalle.jpg" alt="Photo 57">
+        </a>
+    </div>
+    <div id="photo58" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/48-GroupeBordEau.jpg" alt="Photo 58">
+        </a>
+    </div>
+    <div id="photo59" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/49-Matsoury.jpg" alt="Photo 59">
+        </a>
+    </div>
+    <div id="photo60" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/50-MerRochers.jpg" alt="Photo 60">
+        </a>
+    </div>
+    <div id="photo61" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/51bis-JeuxTerrasse.jpg" alt="Photo 61">
+        </a>
+    </div>
+    <div id="photo62" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/51-RochersMer.jpg" alt="Photo 62">
+        </a>
+    </div>
+    <div id="photo63" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/52-8ATable.jpg" alt="Photo 63">
+        </a>
+    </div>
+    <div id="photo64" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/54-PortGrimaud.jpg" alt="Photo 64">
+        </a>
+    </div>
+    <div id="photo65" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/55-JMGrochers.jpg" alt="Photo 65">
+        </a>
+    </div>
+    <div id="photo66" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/56-SurLeRochers.jpg" alt="Photo 66">
+        </a>
+    </div>
+    <div id="photo67" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/57-Randonnee.jpg" alt="Photo 67">
+        </a>
+    </div>
+    <div id="photo68" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/58-CheneDore.jpg" alt="Photo 68">
+        </a>
+    </div>
+    <div id="photo69" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/59-FiletsBleus.jpg" alt="Photo 69">
+        </a>
+    </div>
+    <div id="photo70" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/60-Cremaillere.jpg" alt="Photo 70">
+        </a>
+    </div>
+    <div id="photo71" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/61-RepasPatrickGars.jpg" alt="Photo 71">
+        </a>
+    </div>
+    <div id="photo72" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/62-VueJourSoleil.jpg" alt="Photo 72">
+        </a>
+    </div>
+    <div id="photo73" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/63-VueJourNuage.jpg" alt="Photo 73">
+        </a>
+    </div>
+    <div id="photo74" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/64bis-LaBalladeNordVendeenne.jpg" alt="Photo 74">
+        </a>
+    </div>
+    <div id="photo75" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/64-VueMerSoir.jpg" alt="Photo 75">
+        </a>
+    </div>
+    <div id="photo76" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/65-Banquet.jpg" alt="Photo 76">
+        </a>
+    </div>
+    <div id="photo77" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/70-MontBlanc.jpg" alt="Photo 77">
+        </a>
+    </div>
+    <div id="photo78" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/71-SommetsEnneiges.jpg" alt="Photo 78">
+        </a>
+    </div>
+    <div id="photo79" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/75-DepartSki.jpg" alt="Photo 79">
+        </a>
+    </div>
+    <div id="photo80" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/76-8ATable.jpg" alt="Photo 80">
+        </a>
+    </div>
+    <div id="photo81" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/77-SoireeConcentree.jpg" alt="Photo 81">
+        </a>
+    </div>
+    <div id="photo82" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/78-PapyMontBlanc.jpg" alt="Photo 82">
+        </a>
+    </div>
+    <div id="photo83" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/79-6ATable.jpg" alt="Photo 83">
+        </a>
+    </div>
+    <div id="photo84" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/80-8EnPiste.jpg" alt="Photo 84">
+        </a>
+    </div>
+    <div id="photo85" class="lightbox">
+        <a href="#">
+            <img src="photos-2019-70ans/81-Chanson70(4iemeDeCouve).jpg" alt="Photo 85">
+        </a>
+    </div>
+ 
+    <footer>
+        <p><a href="../pageAuCoeurFamilles.html">Retour "Au cœur des familles"</a></p>
+    </footer>
+</body>
+</html>
