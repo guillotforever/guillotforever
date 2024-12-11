@@ -3,108 +3,338 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galerie Photo</title>
+    <title>2023 : 50 lieux de vie</title>
+    <link rel="stylesheet" href="../css/style.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
+        table {
+          border-collapse: collapse;
+          width: 100%;
         }
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 10px;
-            max-width: 90%;
-            margin: 20px;
+        th, td {
+          border: 1px solid black;
+          padding: 4px;
+          white-space: nowrap; /* Empêche le texte de changer de ligne */
         }
-        .gallery img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-        .gallery img:hover {
-            transform: scale(1.05);
-        }
-        .lightbox {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            justify-content: center;
-            align-items: center;
-        }
-        .lightbox:target {
-            display: flex;
-        }
-        .lightbox a {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: 100%;
-        }
-        .lightbox img {
-            max-width: 90%;
-            max-height: 90%;
-            border-radius: 8px;
-            cursor: pointer;
-        }
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 10px;
-            background: #bfc1e8; /* Fond sombre */
-            color: black; /* Texte blanc */
-            font-size: 1.5em; /* Taille réduite */
-        }
-    </style>
+      </style>
 </head>
 <body>
-    <h1>2023 : 50 lieux de vie</h1>
-    <div class="gallery">
-        <!-- Miniatures des images -->
-        <a href="#photo1"><img src="0-50ansPlutot.jpg" alt="Photo 1"></a>
-        <a href="#photo2"><img src="1bis-20230313_093818.jpg" alt="Photo 2"></a>
-        <a href="#photo3"><img src="11-20211229_201637.jpg" alt="Photo 3"></a>
-        <a href="#photo4"><img src="12-IMG-20211229-WA0008.jpg" alt="Photo 4"></a>
-        <a href="#photo5"><img src="14-IMG-20211230-WA0011.jpg" alt="Photo 5"></a>
-    </div>
-
-    <!-- Lightbox pour afficher les images en grand -->
-    <div id="photo1" class="lightbox">
-        <a href="#">
-            <img src="0-50ansPlutot.jpg" alt="Photo 1">
-        </a>
-    </div>
-    <div id="photo2" class="lightbox">
-        <a href="#">
-            <img src="1bis-20230313_093818.jpg" alt="Photo 2">
-        </a>
-    </div>
-    <div id="photo3" class="lightbox">
-        <a href="#">
-            <img src="11-20211229_201637.jpg" alt="Photo 3">
-        </a>
-    </div>
-    <div id="photo4" class="lightbox">
-        <a href="#">
-            <img src="12-IMG-20211229-WA0008.jpg" alt="Photo 4">
-        </a>
-    </div>
-    <div id="photo5" class="lightbox">
-        <a href="#">
-            <img src="14-IMG-20211230-WA0011.jpg" alt="Photo 5">
-        </a>
-    </div>
+    <header>
+        <h1>2023 : 50 lieux de vie</h1>
+    </header>
+    <main class="content">
+        <div class="content-item">
+             <div class="text-content">
+                <h1 style="text-align: center;"><strong>Dans les mailles des Filets Bleus</strong></h1>
+                <h2 style="text-align: center;"><strong><em>Inventaire des 50 lieux de vie de Genevi&egrave;ve et Jean-Marc&nbsp;:</em></strong></h2>
+                <h2 style="text-align: center;"><strong><em>&nbsp;chacune et chacun puis en couple et en famille de 1949 &agrave; nos jours</em></strong></h2>
+                <h3 style="text-align: center;"><strong>Premi&egrave;re partie&nbsp;:</strong></h3>
+                <p style="text-align: center;"><strong>Famille Genevi&egrave;ve</strong></p>
+                <p style="text-align: center;"><strong>Famille Jean-Marc</strong></p>
+                <p style="text-align: center;"><strong>Etudes Genevi&egrave;ve</strong></p>
+                <p style="text-align: center;"><strong>Etudes Jean-Marc</strong></p>
+                <h3 style="text-align: center;"><strong>Seconde partie&nbsp;:</strong></h3>
+                <p style="text-align: center;"><strong>Travail Genevi&egrave;ve</strong></p>
+                <p style="text-align: center;"><strong>Travail Jean-Marc</strong></p>
+                <p style="text-align: center;"><strong>Famille en Vend&eacute;e</strong></p>
+                <p style="text-align: center;"><strong>Famille &agrave; Paris</strong></p>
+                <p style="text-align: center;"><strong><em>Genevi&egrave;ve et Jean-Marc Guillot le 13 octobre 2023</em></strong></p>
+                <p><strong><em>&nbsp;</em></strong></p>
+                <h2 style="text-align: center;"><strong>Inventaire des lieux de vie de Genevi&egrave;ve et Jean-Marc&nbsp;:&nbsp; chacune et chacun puis en couple et en famille</strong></h2>
+                <p><strong><em>&nbsp;</em></strong></p>
+                <table style="width: 1009px;border: 1px solid black; border-collapse: collapse;vertical-align: top;">
+                <tbody>
+                <tr>
+                <td style="width: 124.1px; border: 1px solid black;vertical-align: top;">
+                <p><strong>Moment</strong></p>
+                </td>
+                <td style="width: 337.9px;border: 1px solid black;vertical-align: top;">
+                <p><strong>Lieu</strong></p>
+                </td>
+                <td style="width: 139px;border: 1px solid black;vertical-align: top;">
+                <p><strong>Objet</strong></p>
+                </td>
+                <td style="width: 130px;border: 1px solid black;vertical-align: top;">
+                <p><strong>Etat</strong></p>
+                </td>
+                <td style="width: 245px;border: 1px solid black;vertical-align: top;">
+                <p><strong>Dates pr&eacute;sence G et/ou JM</strong></p>
+                </td>
+                </tr>
+                <tr>
+                <td style="width: 124.1px;border: 1px solid black;vertical-align: top;">
+                <p>Famille Genevi&egrave;ve</p>
+                </td>
+                <td style="width: 337.9px;border: 1px solid black;vertical-align: top;">
+                <p>23 (aujourd&rsquo;hui le 9) rue P&eacute;relle 2<sup>i&egrave;me</sup>&nbsp;&eacute;tage 44 Nantes</p>
+                <p>2 grande rue La Guibloterie 44330 Le Pallet</p>
+                <p>14 cit&eacute; des Anklais Vieux Doulon 44 Nantes</p>
+                <p>La Vague impasse des Oursins 85270 Sion sur L&rsquo;Oc&eacute;an</p>
+                </td>
+                <td style="width: 139px;border: 1px solid black;vertical-align: top;">
+                <p>R&eacute;sidence principale</p>
+                <p>R&eacute;sidence principale</p>
+                <p>R&eacute;sidence principale</p>
+                <p>R&eacute;sidence principale</p>
+                </td>
+                <td style="width: 130px;border: 1px solid black;vertical-align: top;">
+                <p>Location</p>
+                <p>Achat/Vente</p>
+                <p>Location</p>
+                <p>Achat/Vente</p>
+                </td>
+                <td style="width: 245px;border: 1px solid black;vertical-align: top;">
+                <p>18 juin 1949- 1958</p>
+                <p>1958- 1961</p>
+                <p>1961- Avril 1968</p>
+                <p>Avril 1968- Mars 1972 (A1950 /V1980)</p>
+                </td>
+                </tr>
+                <tr>
+                <td style="width: 124.1px;border: 1px solid black;vertical-align: top;">
+                <p>Famille&nbsp;Jean-Marc</p>
+                </td>
+                <td style="width: 337.9px;border: 1px solid black;vertical-align: top;">
+                <p>Caf&eacute; du Marais boulevard des FFI 85300 Challans</p>
+                <p>16A route de St Jean 85300 Challans</p>
+                <p>11a rue des Barri&egrave;res quartier l&rsquo;Ile d&rsquo;Amour 85300 Challans</p>
+                </td>
+                <td style="width: 139px;border: 1px solid black;vertical-align: top;">
+                <p>R&eacute;sidence principale</p>
+                <p>R&eacute;sidence principale</p>
+                <p>R&eacute;sidence principale</p>
+                </td>
+                <td style="width: 130px;border: 1px solid black;vertical-align: top;">
+                <p>Location</p>
+                <p>Location</p>
+                <p>Construction/Vente</p>
+                </td>
+                <td style="width: 245px;border: 1px solid black;vertical-align: top;">
+                <p>13 octobre 1949-&nbsp;1953</p>
+                <p>1953- 1954</p>
+                <p>&nbsp;1954- Mars 1972 (V2005)</p>
+                </td>
+                </tr>
+                <tr>
+                <td style="width: 124.1px;border: 1px solid black;vertical-align: top;">
+                <p>Etudes Genevi&egrave;ve</p>
+                </td>
+                <td style="width: 337.9px;border: 1px solid black;vertical-align: top;">
+                <p>Ecole maternelle municipale 21 rue Emile P&eacute;hant 44 Nantes</p>
+                <p>Ecole primaire publique 24 rue Emile P&eacute;hant 44 Nantes</p>
+                <p>Ecole publique de filles 7 rue des Templiers 44330 Le Pallet</p>
+                <p>Ecole &eacute;l&eacute;mentaire publique Maurice Mac&eacute; 14 rue du Pontereau 44 Nantes</p>
+                <p>Coll&egrave;ge (devenu LEP L&eacute;onard de Vinci) 31 rue de la Botti&egrave;re 44 Nantes</p>
+                </td>
+                <td style="width: 139px;border: 1px solid black;vertical-align: top;">
+                <p>&nbsp;</p>
+                </td>
+                <td style="width: 130px;border: 1px solid black;vertical-align: top;">
+                <p>&nbsp;</p>
+                </td>
+                <td style="width: 245px;border: 1px solid black;vertical-align: top;">
+                <p>&nbsp;?- Juin 1955</p>
+                <p>Sept 1955- Juin 1958</p>
+                <p>Sept 1958- Juin 1961</p>
+                <p>Sept 1961- Juin 1963</p>
+                <p>Sept 1963- Juin 1966</p>
+                </td>
+                </tr>
+                <tr>
+                <td style="width: 124.1px;border: 1px solid black;vertical-align: top;">
+                <p>Etudes&nbsp;Jean-Marc</p>
+                </td>
+                <td style="width: 337.9px;border: 1px solid black;vertical-align: top;">
+                <p>Maternelle Notre Dame (devenue Ecole des Etabli&egrave;res) rue Capitaine Debout&eacute; 85300 Challans</p>
+                <p>Ecole primaire St Joseph en face du 15 rue Capitaine Debout&eacute;</p>
+                <p>Coll&egrave;ge St Joseph 15 rue Capitaine Debout&eacute; 85300 Challans</p>
+                <p>LTE Livet 16 rue Dufour 44 Nantes</p>
+                <p>IUT 3 rue Mar&eacute;chal Joffre 44 Nantes</p>
+                <p>Service Militaire Base A&eacute;rienne 901 67160 Drachenbronn</p>
+                <p>C&eacute;si Plateau du Moulon 91190 Gif sur Yvette</p>
+                </td>
+                <td style="width: 139px;border: 1px solid black;vertical-align: top;">
+                <p>&nbsp;</p>
+                </td>
+                <td style="width: 130px;border: 1px solid black;vertical-align: top;">
+                <p>&nbsp;</p>
+                </td>
+                <td style="width: 245px;border: 1px solid black;vertical-align: top;">
+                <p>&nbsp;?- Juin 1955</p>
+                <p>Sept 1955- Juin 1960</p>
+                <p>Sept 1960- Juin 1964</p>
+                <p>Sept 1964- Juin 1967</p>
+                <p>Sept 1967- Juin 1969</p>
+                <p>1<sup>er</sup>&nbsp;novembre 1969- 30 octobre 1970</p>
+                <p>Avril 1978- Mars 1980</p>
+                </td>
+                </tr>
+                <tr>
+                <td style="width: 124.1px;border: 1px solid black;vertical-align: top;">
+                <p><strong>Moment</strong></p>
+                </td>
+                <td style="width: 337.9px;border: 1px solid black;vertical-align: top;">
+                <p><strong>Lieu</strong></p>
+                </td>
+                <td style="width: 139px;border: 1px solid black;vertical-align: top;">
+                <p><strong>Objet</strong></p>
+                </td>
+                <td style="width: 130px;border: 1px solid black;vertical-align: top;">
+                <p><strong>Etat</strong></p>
+                </td>
+                <td style="width: 245px;border: 1px solid black;vertical-align: top;">
+                <p><strong>Dates pr&eacute;sence</strong></p>
+                </td>
+                </tr>
+                <tr>
+                <td style="width: 124.1px;border: 1px solid black;vertical-align: top;">
+                <p>Travail Genevi&egrave;ve</p>
+                </td>
+                <td style="width: 337.9px;border: 1px solid black;vertical-align: top;">
+                <p>Magasin Brunner rue de la Boucherie 44 Nantes</p>
+                <p>SMNV rue Guibourg de Luzinais 44 Nantes</p>
+                <p>Bremaud-France El&eacute;gance rue Pierre Lucas 85800 SGXV</p>
+                <p>M&eacute;rignac-Thierry Sigrand 34 rte de Nantes 85190 Aizenay</p>
+                </td>
+                <td style="width: 139px;border: 1px solid black;vertical-align: top;">
+                <p>&nbsp;</p>
+                </td>
+                <td style="width: 130px;border: 1px solid black;vertical-align: top;">
+                <p>&nbsp;</p>
+                </td>
+                <td style="width: 245px;border: 1px solid black;vertical-align: top;">
+                <p>Sept 1966- Ao&ucirc;t 1967</p>
+                <p>Sept 1967- Avril 1968</p>
+                <p>Avril 1968- Mars 1972</p>
+                <p>13 mars 1972- 25 septembre 1973</p>
+                </td>
+                </tr>
+                <tr>
+                <td style="width: 124.1px;border: 1px solid black;vertical-align: top;">
+                <p>Travail&nbsp; Jean-Marc</p>
+                </td>
+                <td style="width: 337.9px;border: 1px solid black;vertical-align: top;">
+                <p>Chantiers Dubigeon Bd la Prairie au Duc 44 Nantes</p>
+                <p>Rochland puis Hesston 20 rte d&rsquo;Aizenay 85220 Co&euml;x</p>
+                <p>SCO 1bis rue Julien Videment 44 Nantes (filiale de LIA 21 avenue Franklin Roosevelt 75008 Paris)</p>
+                <p>Hansen 26 rue Cambon 75001 Paris</p>
+                <p>Hansen puis TBS 25 rue d&rsquo;Astorg 75008 Paris</p>
+                <p>TBS puis Mercer RH 48 rue Vivienne 75002 Paris</p>
+                <p>Mercer RH 54 quai Michelet 92300 Levallois-Perret</p>
+                <p>William M. Mercer 36 rue Raspail 92300 Levallois-Perret</p>
+                <p>Muta puis Quaternaire 9 rue Jules Verne 44700 Orvault</p>
+                <p>Alyzo 235 rue de Bercy 75012 Paris</p>
+                <p>BL Consultants 84 quai Joseph Gillet 69004 Lyon</p>
+                <p>Links Conseil 83 bd du Montparnasse 75006 Paris puis 24 rue de Prony 75017 (depuis oct.2022&nbsp;: 34 rue Laffite 75009)</p>
+                </td>
+                <td style="width: 139px;border: 1px solid black;vertical-align: top;">
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                </td>
+                <td style="width: 130px;border: 1px solid black;vertical-align: top;">
+                <p>&nbsp;</p>
+                </td>
+                <td style="width: 245px;border: 1px solid black;vertical-align: top;">
+                <p>9 novembre 1970- Novembre 1971</p>
+                <p>Nov. 71- Mars 78 + Avril 80- Mars 83</p>
+                <p>Avril 1983- Mars 1987</p>
+                <p>Avril 1987- D&eacute;cembre 1988</p>
+                <p>Janvier 1989- Ao&ucirc;t 1990</p>
+                <p>Septembre 1990- Mai 1992- D&eacute;c. 1993</p>
+                <p>Janvier 1994- D&eacute;cembre 1995</p>
+                <p>Janvier 1996- Mars 2001</p>
+                <p>Mars 2002- Octobre 2009</p>
+                <p>2007- 2011</p>
+                <p>Novembre 2007- D&eacute;cembre 2016</p>
+                <p>Octobre 2001- ce jour</p>
+                </td>
+                </tr>
+                <tr>
+                <td style="width: 124.1px;border: 1px solid black;vertical-align: top;">
+                <p>Famille&nbsp; en Vend&eacute;e</p>
+                </td>
+                <td style="width: 337.9px;border: 1px solid black;vertical-align: top;">
+                <p>11 rue mar&eacute;chal Foch 1er &eacute;tage 85190 Aizenay</p>
+                <p>17 rue Albert 1er 1er &eacute;tage Bel Air 85300 Challans</p>
+                <p>2 chemin du Moulin de la Rivi&egrave;re 85300 Soullans</p>
+                <p>La Fr&eacute;gate 19 av. de l&rsquo;Estacade 2<sup>i&egrave;me</sup>&nbsp;&eacute;tage 85550 Fromentine</p>
+                <p>Le Z&eacute;phir 30 av. de Lattre de Tassigny 2<sup>i&egrave;me</sup>&nbsp;&eacute;tage 85550 From.</p>
+                <p>Le Ch&ecirc;ne Dor&eacute; 1 chemin des Rouill&egrave;res 3 niveaux 85800 SGXV</p>
+                <p>Les Filets Bleus 31 quai du Port Fid&egrave;le 3<sup>i&egrave;me</sup>&nbsp;&eacute;tage 85800 SGXV</p>
+                <p>La Vigie 17 quai du Port Fid&egrave;le 1<sup>ier</sup>&nbsp;&eacute;tage 85800 SGXV</p>
+                <p>Le Port Royal 100 quai de la R&eacute;publique RdC 85800 SGXV</p>
+                </td>
+                <td style="width: 139px;border: 1px solid black;vertical-align: top;">
+                <p>R&eacute;sidence principale</p>
+                <p>R&eacute;sidence principale</p>
+                <p>R&eacute;sidence principale</p>
+                <p>R&eacute;sidence principale</p>
+                <p>R&eacute;sidence secondaire</p>
+                <p>R&eacute;sidence principale</p>
+                <p>R&eacute;sidence principale</p>
+                <p>R&eacute;sidence secondaire</p>
+                <p>R&eacute;sidence secondaire</p>
+                </td>
+                <td style="width: 130px;border: 1px solid black;vertical-align: top;">
+                <p>Location</p>
+                <p>Location</p>
+                <p>Construction/Vente</p>
+                <p>Achat/Vente</p>
+                <p>Achat/Vente</p>
+                <p>Achat/Vente</p>
+                <p>Location</p>
+                <p>Achat pour famille</p>
+                <p>Achat pour location</p>
+                </td>
+                <td style="width: 245px;border: 1px solid black;vertical-align: top;">
+                <p>Mars 1972- Juin 1973</p>
+                <p>Juin 1973- Juin 1975</p>
+                <p>Juin 1975- Ao&ucirc;t 2005 (+ garage 1977+ chambre 1983+ seconde maison 1980)</p>
+                <p>Ao&ucirc;t 2005-Sept 2011(A2004/V2013)</p>
+                <p>2006-22 Juin 2015</p>
+                <p>Ao&ucirc;t 2011-Nov 2019 (A2001/V 2021)</p>
+                <p>18 novembre 2019- ce jour</p>
+                <p>7 octobre 2020- ce jour</p>
+                <p>26 septembre 2023- ce jour</p>
+                </td>
+                </tr>
+                <tr>
+                <td style="width: 124.1px;border: 1px solid black;vertical-align: top;">
+                <p>Famille &agrave; Paris</p>
+                </td>
+                <td style="width: 337.9px;border: 1px solid black;vertical-align: top;">
+                <p>64 rue Jean-Pierre Timbaud 1<sup>er</sup>&nbsp;&eacute;tage 75011 Paris&nbsp;</p>
+                <p>13 rue Verniquet 2<sup>i&egrave;me</sup>&nbsp;&eacute;tage 75017 Paris</p>
+                <p>22 avenue Anatole France 4<sup>i&egrave;me</sup>&nbsp;&eacute;tage 92110 Clichy la Garenne</p>
+                </td>
+                <td style="width: 139px;border: 1px solid black;vertical-align: top;">
+                <p>R&eacute;sidence travail/sec.</p>
+                <p>R&eacute;sidence travail/sec.</p>
+                <p>R&eacute;sidence travail/sec.</p>
+                </td>
+                <td style="width: 130px;border: 1px solid black;vertical-align: top;">
+                <p>Achat/Vente</p>
+                <p>Achat/Vente</p>
+                <p>Achat/Vente</p>
+                </td>
+                <td style="width: 245px;border: 1px solid black;vertical-align: top;">
+                <p>18 juin 1987- Oct 1998 (V 1999)</p>
+                <p>30 oct.1998- Mars 2004 (V Juin 2004)</p>
+                <p>29 mars 2004- 27 Janvier 2011</p>
+                </td>
+                </tr>
+                </tbody>
+                </table>
+                <p>&nbsp;</p>
+                <!-- Comments are visible in the HTML source only -->
+            </div>
+        </div>
+    </main>
     <footer>
         <p><a href="../pageAuCoeurFamilles.html">Retour "Au cœur des familles"</a></p>
     </footer>
