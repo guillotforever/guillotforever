@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confinement et déconfinement début 2020</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            max-width: 90%;
+            margin: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+        .lightbox:target {
+            display: flex;
+        }
+        .lightbox a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #bfc1e8; /* Fond sombre */
+            color: black; /* Texte blanc */
+            font-size: 1.5em; /* Taille réduite */
+        }
+    </style>
+</head>
+<body>
+    <h2 style="text-align: left;">Rappel du déroulement des évènements collectifs</h2>
+    <p style="text-align: left;">1 - Jusqu’au 16 mars : quelle gravité ? quel mode de transmission ?<br>
+    2 - Du 17 mars au 10 mai : confinement total « Restez chez vous! »<br>
+    3 - Du 11 mai au 1er juin : première étape du déconfinement<br>
+    4 - Du 2 juin au 21 juin : deuxième étape du déconfinement<br>
+    5 - Du 22 juin au 11 juillet : troisième étape du déconfinement<br>
+    6 - Du 12 juillet au …… ? : dernière étape du déconfinement?</p>
+    <h2 style="text-align: left;">Images et textes du vécu personnel</h2>
+    <p style="text-align: left;">A - Echanges de photos perso confinées<br>
+        B - Gribouillis de chansons et réflexions<br>
+        C - Chapardages de photos déconfinées<br>
+        D - Tant que le soleil brille dans le ciel des Filets Bleus….</p>
+        <a href="../../pdfjs/web/viewer.html?file=../../IlEtaitFois/ConfinementDeconfinement/ConfinementDeconfinement.pdf" class="tile">
+            <div class="tile-content">
+                <h2>Confinement... déconfinement</h2>
+            </div>
+        </a>
+    <div class="gallery">
+        <!-- Miniatures des images -->
+        <a href="#photo0"><img src="photo0.jpg" alt="Photo 0"></a>
+        <a href="#photo1"><img src="photo1.jpg" alt="Photo 1"></a>
+        <a href="#photo2"><img src="photo2.jpg" alt="Photo 2"></a>
+        <a href="#photo3"><img src="photo3.jpg" alt="Photo 3"></a>        
+        <a href="#photo4"><img src="photo4.jpg" alt="Photo 4"></a>        
+        <a href="#photo5"><img src="photo5.jpg" alt="Photo 5"></a>        
+        <a href="#photo6"><img src="photo6.jpg" alt="Photo 6"></a>        
+        <a href="#photo7"><img src="photo7.jpg" alt="Photo 7"></a>        
+        <a href="#photo8"><img src="photo8.jpg" alt="Photo 8"></a>        
+        <a href="#photo9"><img src="photo9.jpg" alt="Photo 9"></a>        
+        <a href="#photo10"><img src="photo10.jpg" alt="Photo 10"></a>        
+        <a href="#photo11"><img src="photo11.jpg" alt="Photo 11"></a>        
+        <a href="#photo12"><img src="photo12.jpg" alt="Photo 12"></a>        
+        <a href="#photo13"><img src="photo13.jpg" alt="Photo 13"></a>        
+        <a href="#photo14"><img src="photo14.jpg" alt="Photo 14"></a>    
+        <a href="#photo15"><img src="photo15.jpg" alt="Photo 15"></a>        
+        <a href="#photo16"><img src="photo16.jpg" alt="Photo 16"></a>        
+        <a href="#photo17"><img src="photo17.jpg" alt="Photo 17"></a>        
+        <a href="#photo18"><img src="photo18.jpg" alt="Photo 18"></a>        
+        <a href="#photo19"><img src="photo19.jpg" alt="Photo 19"></a>        
+        <a href="#photo20"><img src="photo20.jpg" alt="Photo 20"></a>        
+        <a href="#photo21"><img src="photo21.jpg" alt="Photo 21"></a>        
+        <a href="#photo22"><img src="photo22.jpg" alt="Photo 22"></a>        
+        <a href="#photo23"><img src="photo23.jpg" alt="Photo 23"></a>        
+        <a href="#photo24"><img src="photo24.jpg" alt="Photo 24"></a>        
+        <a href="#photo25"><img src="photo25.jpg" alt="Photo 25"></a>        
+        <a href="#photo26"><img src="photo26.jpg" alt="Photo 26"></a>        
+        <a href="#photo27"><img src="photo27.jpg" alt="Photo 27"></a>        
+        <a href="#photo28"><img src="photo28.jpg" alt="Photo 28"></a>        
+        <a href="#photo29"><img src="photo29.jpg" alt="Photo 29"></a>        
+        <a href="#photo30"><img src="photo30.jpg" alt="Photo 30"></a>        
+        <a href="#photo31"><img src="photo31.jpg" alt="Photo 31"></a>        
+        <a href="#photo32"><img src="photo32.jpg" alt="Photo 32"></a>        
+        <a href="#photo33"><img src="photo33.jpg" alt="Photo 33"></a>        
+        <a href="#photo34"><img src="photo34.jpg" alt="Photo 34"></a>        
+        <a href="#photo35"><img src="photo35.jpg" alt="Photo 35"></a>        
+        <a href="#photo36"><img src="photo36.jpg" alt="Photo 36"></a>        
+        <a href="#photo37"><img src="photo37.jpg" alt="Photo 37"></a>        
+        <a href="#photo38"><img src="photo38.jpg" alt="Photo 38"></a>        
+        <a href="#photo39"><img src="photo39.jpg" alt="Photo 39"></a>        
+        <a href="#photo40"><img src="photo40.jpg" alt="Photo 40"></a>        
+        <a href="#photo41"><img src="photo41.jpg" alt="Photo 41"></a>        
+        <a href="#photo42"><img src="photo42.jpg" alt="Photo 42"></a>        
+        <a href="#photo43"><img src="photo43.jpg" alt="Photo 43"></a>        
+        <a href="#photo44"><img src="photo44.jpg" alt="Photo 44"></a>        
+        <a href="#photo45"><img src="photo45.jpg" alt="Photo 45"></a>        
+        <a href="#photo46"><img src="photo46.jpg" alt="Photo 46"></a>        
+        <a href="#photo47"><img src="photo47.jpg" alt="Photo 47"></a>        
+        <a href="#photo48"><img src="photo48.jpg" alt="Photo 48"></a>        
+        <a href="#photo49"><img src="photo49.jpg" alt="Photo 49"></a>        
+    </div>
+
+    <!-- Lightbox pour afficher les images en grand -->
+    <div id="photo0" class="lightbox">
+        <a href="#">
+            <img src="photo0.jpg" alt="Photo 0">
+        </a>
+    </div>
+    <div id="photo1" class="lightbox">
+        <a href="#">
+            <img src="photo1.jpg" alt="Photo 1">
+        </a>
+    </div>
+    <div id="photo2" class="lightbox">
+        <a href="#">
+            <img src="photo2.jpg" alt="Photo 2">
+        </a>
+    </div>
+    <div id="photo3" class="lightbox">
+        <a href="#">
+            <img src="photo3.jpg" alt="Photo 3">
+        </a>
+    </div>
+    <div id="photo4" class="lightbox">
+        <a href="#">
+            <img src="photo4.jpg" alt="Photo 4">
+        </a>
+    </div>
+    <div id="photo5" class="lightbox">
+        <a href="#">
+            <img src="photo5.jpg" alt="Photo 5">
+        </a>
+    </div>
+    <div id="photo6" class="lightbox">
+        <a href="#">
+            <img src="photo6.jpg" alt="Photo 6">
+        </a>
+    </div>
+    <div id="photo7" class="lightbox">
+        <a href="#">
+            <img src="photo7.jpg" alt="Photo 7">
+        </a>
+    </div>
+    <div id="photo8" class="lightbox">
+        <a href="#">
+            <img src="photo8.jpg" alt="Photo 8">
+        </a>
+    </div>
+    <div id="photo9" class="lightbox">
+        <a href="#">
+            <img src="photo9.jpg" alt="Photo 9">
+        </a>
+    </div>
+    <div id="photo10" class="lightbox">
+        <a href="#">
+            <img src="photo10.jpg" alt="Photo 10">
+        </a>
+    </div>
+    <div id="photo11" class="lightbox">
+        <a href="#">
+            <img src="photo11.jpg" alt="Photo 11">
+        </a>
+    </div>
+    <div id="photo12" class="lightbox">
+        <a href="#">
+            <img src="photo12.jpg" alt="Photo 12">
+        </a>
+    </div>
+    <div id="photo13" class="lightbox">
+        <a href="#">
+            <img src="photo13.jpg" alt="Photo 13">
+        </a>
+    </div>
+    <div id="photo14" class="lightbox">
+        <a href="#">
+            <img src="photo14.jpg" alt="Photo 14">
+        </a>
+    </div>
+    <div id="photo15" class="lightbox">
+        <a href="#">
+            <img src="photo15.jpg" alt="Photo 15">
+        </a>
+    </div>
+    <div id="photo16" class="lightbox">
+        <a href="#">
+            <img src="photo16.jpg" alt="Photo 16">
+        </a>
+    </div>
+    <div id="photo17" class="lightbox">
+        <a href="#">
+            <img src="photo17.jpg" alt="Photo 17">
+        </a>
+    </div>
+    <div id="photo18" class="lightbox">
+        <a href="#">
+            <img src="photo18.jpg" alt="Photo 18">
+        </a>
+    </div>
+    <div id="photo19" class="lightbox">
+        <a href="#">
+            <img src="photo19.jpg" alt="Photo 19">
+        </a>
+    </div>
+    <div id="photo20" class="lightbox">
+        <a href="#">
+            <img src="photo20.jpg" alt="Photo 20">
+        </a>
+    </div>
+    <div id="photo21" class="lightbox">
+        <a href="#">
+            <img src="photo21.jpg" alt="Photo 21">
+        </a>
+    </div>
+    <div id="photo22" class="lightbox">
+        <a href="#">
+            <img src="photo22.jpg" alt="Photo 22">
+        </a>
+    </div>
+    <div id="photo23" class="lightbox">
+        <a href="#">
+            <img src="photo23.jpg" alt="Photo 23">
+        </a>
+    </div>
+    <div id="photo24" class="lightbox">
+        <a href="#">
+            <img src="photo24.jpg" alt="Photo 24">
+        </a>
+    </div>
+    <div id="photo25" class="lightbox">
+        <a href="#">
+            <img src="photo25.jpg" alt="Photo 25">
+        </a>
+    </div>
+    <div id="photo26" class="lightbox">
+        <a href="#">
+            <img src="photo26.jpg" alt="Photo 26">
+        </a>
+    </div>
+    <div id="photo27" class="lightbox">
+        <a href="#">
+            <img src="photo27.jpg" alt="Photo 27">
+        </a>
+    </div>
+    <div id="photo28" class="lightbox">
+        <a href="#">
+            <img src="photo28.jpg" alt="Photo 28">
+        </a>
+    </div>
+    <div id="photo29" class="lightbox">
+        <a href="#">
+            <img src="photo29.jpg" alt="Photo 29">
+        </a>
+    </div>
+    <div id="photo30" class="lightbox">
+        <a href="#">
+            <img src="photo30.jpg" alt="Photo 30">
+        </a>
+    </div>
+    <div id="photo31" class="lightbox">
+        <a href="#">
+            <img src="photo31.jpg" alt="Photo 31">
+        </a>
+    </div>
+    <div id="photo32" class="lightbox">
+        <a href="#">
+            <img src="photo32.jpg" alt="Photo 32">
+        </a>
+    </div>
+    <div id="photo33" class="lightbox">
+        <a href="#">
+            <img src="photo33.jpg" alt="Photo 33">
+        </a>
+    </div>
+    <div id="photo34" class="lightbox">
+        <a href="#">
+            <img src="photo34.jpg" alt="Photo 34">
+        </a>
+    </div>
+    <div id="photo35" class="lightbox">
+        <a href="#">
+            <img src="photo35.jpg" alt="Photo 35">
+        </a>
+    </div>
+    <div id="photo36" class="lightbox">
+        <a href="#">
+            <img src="photo36.jpg" alt="Photo 36">
+        </a>
+    </div>
+    <div id="photo37" class="lightbox">
+        <a href="#">
+            <img src="photo37.jpg" alt="Photo 37">
+        </a>
+    </div>
+    <div id="photo38" class="lightbox">
+        <a href="#">
+            <img src="photo38.jpg" alt="Photo 38">
+        </a>
+    </div>
+    <div id="photo39" class="lightbox">
+        <a href="#">
+            <img src="photo39.jpg" alt="Photo 39">
+        </a>
+    </div>
+    <div id="photo40" class="lightbox">
+        <a href="#">
+            <img src="photo40.jpg" alt="Photo 40">
+        </a>
+    </div>
+    <div id="photo41" class="lightbox">
+        <a href="#">
+            <img src="photo41.jpg" alt="Photo 41">
+        </a>
+    </div>
+    <div id="photo42" class="lightbox">
+        <a href="#">
+            <img src="photo42.jpg" alt="Photo 42">
+        </a>
+    </div>
+    <div id="photo43" class="lightbox">
+        <a href="#">
+            <img src="photo43.jpg" alt="Photo 43">
+        </a>
+    </div>
+    <div id="photo44" class="lightbox">
+        <a href="#">
+            <img src="photo44.jpg" alt="Photo 44">
+        </a>
+    </div>
+    <div id="photo45" class="lightbox">
+        <a href="#">
+            <img src="photo45.jpg" alt="Photo 45">
+        </a>
+    </div>
+    <div id="photo46" class="lightbox">
+        <a href="#">
+            <img src="photo46.jpg" alt="Photo 46">
+        </a>
+    </div>
+    <div id="photo47" class="lightbox">
+        <a href="#">
+            <img src="photo47.jpg" alt="Photo 47">
+        </a>
+    </div>
+    <div id="photo48" class="lightbox">
+        <a href="#">
+            <img src="photo48.jpg" alt="Photo 48">
+        </a>
+    </div>
+    <div id="photo49" class="lightbox">
+        <a href="#">
+            <img src="photo49.jpg" alt="Photo 49">
+        </a>
+    </div>
+    <footer>
+        <p><a href="../../pageIlEtaitFois.html">Retour "Il était une fois… le confinement !"</a></p>
+    </footer>
+</body>
+</html>
