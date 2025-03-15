@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les retrouvailles d'hiver première partie</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            max-width: 90%;
+            margin: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+        .lightbox:target {
+            display: flex;
+        }
+        .lightbox a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #bfc1e8; /* Fond sombre */
+            color: black; /* Texte blanc */
+            font-size: 1.5em; /* Taille réduite */
+        }
+    </style>
+    <script>
+        let scrollPosition = 0;
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // Sauvegarder la position de défilement au clic sur une image
+            document.querySelectorAll(".gallery a").forEach(function (link) {
+                link.addEventListener("click", function () {
+                    scrollPosition = window.scrollY;
+                });
+            });
+
+            // Restaurer la position de défilement après avoir fermé une image
+            document.querySelectorAll(".lightbox a").forEach(function (link) {
+                link.addEventListener("click", function () {
+                    setTimeout(function () {
+                        window.scrollTo(0, scrollPosition);
+                    }, 0); // Utilisation de setTimeout pour attendre la fin du changement d'URL
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Les retrouvailles d'hiver première partie</h1>
+    <div class="gallery">
+        <!-- Miniatures des images -->
+        <a href="#photo1"><img src="5-Vaureal.jpg" alt="Photo 1"></a>
+        <a href="#photo2"><img src="6-Genas.jpg" alt="Photo 2"></a>
+        <a href="#photo3"><img src="7-PatSamLouis.jpg" alt="Photo 3"></a>
+    </div>
+
+    <!-- Lightbox pour afficher les images en grand -->
+    <div id="photo1" class="lightbox">
+        <a href="#">
+            <img src="5-Vaureal.jpg" alt="Photo 1">
+        </a>
+    </div>
+    <div id="photo2" class="lightbox">
+        <a href="#">
+            <img src="6-Genas.jpg" alt="Photo 2">
+        </a>
+    </div>
+    <div id="photo3" class="lightbox">
+        <a href="#">
+            <img src="7-PatSamLouis.jpg" alt="Photo 3">
+        </a>
+    </div>
+    <footer>
+        <p><a href="../pageAnnee75ans.html">Retour "75 ans en famille"</a></p>
+    </footer>
+</body>
+</html>
