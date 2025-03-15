@@ -1,0 +1,109 @@
+/* Global */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre tout le contenu horizontalement */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Utilisation d'Arial */
+    font-size: 14px; /* Taille réduite (-25%) */
+    background-color: #f9f9f9; /* Couleur de fond légère */
+    color: #333; /* Texte par défaut en gris foncé */
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: #fff; /* Fond blanc */
+    color: #000; /* Texte noir */
+    border-bottom: 1px solid #ccc;
+}
+
+header img {
+    margin: 20px auto;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Main Content */
+main,
+header,
+footer {
+    max-width: 800px; /* Largeur maximale */
+    width: 100%; /* Prend toute la largeur de l'écran jusqu'à 800px */
+    margin: 0 auto; /* Centre horizontalement */
+    padding: 20px; /* Espace intérieur */
+}
+
+/* Tuiles de la page d'accueil */
+.tiles {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permet d'aller à la ligne si nécessaire */
+    gap: 20px; /* Espacement entre les tuiles */
+    margin-top: 20px;
+}
+
+.tile {
+    width: 150px; /* Réduction de la taille (-25%) */
+    height: 150px; /* Réduction de la taille (-25%) */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    background: #E6E6FA; /* Mauve clair */
+    color: black;
+    border-radius: 5px;
+    font-size: 0.9em; /* Taille du texte réduite */
+    transition: background 0.3s ease-in-out;
+}
+
+.tile:hover {
+    background: #D8BFD8; /* Mauve légèrement plus foncé au survol */
+}
+
+/* Images sur les pages secondaires */
+.content-item img {
+    max-width: 30%; /* Réduction de la taille de l'image (-25%) */
+    margin-right: 20px; /* Espace à droite de l'image */
+    float: left; /* Positionne l'image à gauche */
+}
+
+/* Paragraphes */
+.content-item p {
+    margin-bottom: 20px; /* Espacement entre les paragraphes */
+    font-size: 0.9em; /* Taille réduite des paragraphes */
+    line-height: 1.8; /* Lisibilité accrue */
+    color: #333; /* Texte gris foncé */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #bfc1e8; /* Fond sombre */
+    color: black; /* Texte blanc */
+    font-size: 1.5em; /* Taille réduite */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .tile {
+        width: 90%;
+        height: auto;
+    }
+
+    .content-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content-item img {
+        max-width: 100%;
+        margin: 0 auto 20px; /* Centrer les images sur les petits écrans */
+        float: none; /* Supprime l'effet flottant */
+    }
+}
