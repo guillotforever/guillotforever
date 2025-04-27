@@ -4,124 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Croisière du Pacifique : Chili à Australie (2025)</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 10px;
-            max-width: 90%;
-            margin: 20px;
-        }
-        .gallery img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-        .gallery img:hover {
-            transform: scale(1.05);
-        }
-        .lightbox {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            justify-content: center;
-            align-items: center;
-        }
-        .lightbox:target {
-            display: flex;
-        }
-        .lightbox a {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: 100%;
-        }
-        .lightbox img {
-            max-width: 90%;
-            max-height: 90%;
-            border-radius: 8px;
-            cursor: pointer;
-        }
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 10px;
-            background: #bfc1e8; /* Fond sombre */
-            color: black; /* Texte blanc */
-            font-size: 1.5em; /* Taille réduite */
-        }
-    </style>
-    <script>
-        let scrollPosition = 0;
-
-        document.addEventListener("DOMContentLoaded", function () {
-            // Sauvegarder la position de défilement au clic sur une image
-            document.querySelectorAll(".gallery a").forEach(function (link) {
-                link.addEventListener("click", function () {
-                    scrollPosition = window.scrollY;
-                });
-            });
-
-            // Restaurer la position de défilement après avoir fermé une image
-            document.querySelectorAll(".lightbox a").forEach(function (link) {
-                link.addEventListener("click", function () {
-                    setTimeout(function () {
-                        window.scrollTo(0, scrollPosition);
-                    }, 0); // Utilisation de setTimeout pour attendre la fin du changement d'URL
-                });
-            });
-        });
-    </script>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <h1>Croisière du Pacifique : Chili à Australie (2025)</h1>
-    <div class="gallery">
-        <!-- Miniatures des images -->
-        <a href="#photo1"><img src="0-50ansPlutot.jpg" alt="Photo 1"></a>
-    </div>
-
-    <!-- Lightbox pour afficher les images en grand -->
-    <div id="photo1" class="lightbox">
-        <a href="#">
-            <img src="0-50ansPlutot.jpg" alt="Photo 1">
+    <header>
+        <h1>Croisière du Pacifique : Chili à Australie (2025)</h1>
+    </header>
+    <section class="tiles">
+        <a href="../pdfjs/web/viewer.html?file=../../VacancesVoyages/pacifique/0Presentation.pdf" class="tile">
+            <div class="tile-content">
+                <h2>0 Présentation</h2>
+            </div>
         </a>
-    </div>
-    <div id="photo2" class="lightbox">
-        <a href="#">
-            <img src="1bis-20230313_093818.jpg" alt="Photo 2">
+        <a href="../pdfjs/web/viewer.html?file=../../VacancesVoyages/pacifique/1Itineraireetcartes.pdf" class="tile">
+            <div class="tile-content">
+                <h2>1 Itinéraire et cartes</h2>
+            </div>
         </a>
-    </div>
-    <div id="photo3" class="lightbox">
-        <a href="#">
-            <img src="11-20211229_201637.jpg" alt="Photo 3">
+        <a href="../pdfjs/web/viewer.html?file=../../VacancesVoyages/pacifique/2Embarquementbateau.pdf" class="tile">
+            <div class="tile-content">
+                <h2>2 Embarquement bateau</h2>
+            </div>
         </a>
-    </div>
-    <div id="photo4" class="lightbox">
-        <a href="#">
-            <img src="12-IMG-20211229-WA0008.jpg" alt="Photo 4">
+        <a href="../pdfjs/web/viewer.html?file=../../VacancesVoyages/pacifique/3IledePaques.pdf" class="tile">
+            <div class="tile-content">
+                <h2>3 Ile de Pâques</h2>
+            </div>
         </a>
-    </div>
-    <div id="photo5" class="lightbox">
-        <a href="#">
-            <img src="14-IMG-20211230-WA0011.jpg" alt="Photo 5">
+        <a href="../pdfjs/web/viewer.html?file=../../VacancesVoyages/pacifique/4Pitcairn.pdf" class="tile">
+            <div class="tile-content">
+                <h2>4 Pitcairn</h2>
+            </div>
         </a>
-    </div>
+        <a href="../pdfjs/web/viewer.html?file=../../VacancesVoyages/pacifique/5PapeeteTahiti.pdf" class="tile">
+            <div class="tile-content">
+                <h2>5 Papeete (Tahiti)</h2>
+            </div>
+        </a>
+        <a href="../pdfjs/web/viewer.html?file=../../VacancesVoyages/pacifique/6Moorea.pdf" class="tile">
+            <div class="tile-content">
+                <h2>6 Moorea</h2>
+            </div>
+        </a>
+        <a href="../pdfjs/web/viewer.html?file=../../VacancesVoyages/pacifique/7RarotongaCook.pdf" class="tile">
+            <div class="tile-content">
+                <h2>7 Rarotonga (Cook)</h2>
+            </div>
+        </a>
+        <a href="../pdfjs/web/viewer.html?file=../../VacancesVoyages/pacifique/8NukualofaTonga.pdf" class="tile">
+            <div class="tile-content">
+                <h2>8 Nuku'alofa (Tonga)</h2>
+            </div>
+        </a>
+        <a href="../pdfjs/web/viewer.html?file=../../VacancesVoyages/pacifique/9SuvaFidji.pdf" class="tile">
+            <div class="tile-content">
+                <h2>9 Suva (Fidji)</h2>
+            </div>
+        </a>
+        <a href="../pdfjs/web/viewer.html?file=../../VacancesVoyages/pacifique/10LifouNCaledonie.pdf" class="tile">
+            <div class="tile-content">
+                <h2>10 Lifou (N.Calédonie)</h2>
+            </div>
+        </a>
+        <a href="../pdfjs/web/viewer.html?file=../../VacancesVoyages/pacifique/11TaurangaNZelande.pdf" class="tile">
+            <div class="tile-content">
+                <h2>11 Tauranga (N. Zélande)</h2>
+            </div>
+        </a>
+        <a href="../pdfjs/web/viewer.html?file=../../VacancesVoyages/pacifique/12AucklandNZelande.pdf" class="tile">
+            <div class="tile-content">
+                <h2>12 Auckland (N. Zélande)</h2>
+            </div>
+        </a>
+        <a href="../pdfjs/web/viewer.html?file=../../VacancesVoyages/pacifique/13HobartTasmanie.pdf" class="tile">
+            <div class="tile-content">
+                <h2>13 Hobart (Tasmanie)</h2>
+            </div>
+        </a>
+        <a href="../pdfjs/web/viewer.html?file=../../VacancesVoyages/pacifique/14SydneyAustralie.pdf" class="tile">
+            <div class="tile-content">
+                <h2>14 Sydney (Australie)</h2>
+            </div>
+        </a>
+        <a href="../pdfjs/web/viewer.html?file=../../VacancesVoyages/pacifique/15-16CostaDeliziosaetvieabord.pdf" class="tile">
+            <div class="tile-content">
+                <h2>15-16 Costa Deliziosa et vie à bord</h2>
+            </div>
+        </a>
+        <a href="../pdfjs/web/viewer.html?file=../../VacancesVoyages/pacifique/17Debarquementbateau.pdf" class="tile">
+            <div class="tile-content">
+                <h2>17 Débarquement bateau</h2>
+            </div>
+        </a>
+   </section>
+    <section class="tiles">
+    </section>
     <footer>
         <p><a href="../pageVacancesVoyages.html">Retour "Vacances et Voyages"</a></p>
     </footer>
